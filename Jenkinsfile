@@ -8,7 +8,7 @@ pipeline {
 					filter: '**/*.war', 
 					fingerprintArtifacts: true,
 					projectName: 'tomcat9-deploy',
-					selector: buildParameter('#2')
+					selector: lastSuccessful()
 				)
 			}
 		}
